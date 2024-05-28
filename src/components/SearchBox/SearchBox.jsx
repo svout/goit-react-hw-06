@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from '../../redux /filtersSlice';
-import "./SearchBox.css"
 
 const SearchBox = () => {
   const dispatch = useDispatch();
@@ -17,7 +16,7 @@ const SearchBox = () => {
       placeholder="Search contacts..."
       value={searchQuery}
       onChange={handleChange}
-      className='search-box'
+      className='w-full p-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
     />
   );
 };

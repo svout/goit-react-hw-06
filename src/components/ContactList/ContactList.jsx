@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import {persistor} from "../../redux /store"
+import { persistor } from "../../redux /store";
 import Contact from "../Contact/Contact";
-import "./ContactList.css"
+
 const ContactList = () => {
   useEffect(() => {
     persistor.persist();
@@ -15,11 +15,11 @@ const ContactList = () => {
   );
 
   return (
-    <div>
-      <h2>Contacts</h2>
-      <ul className="contact-list">
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">Contacts</h2>
+      <ul className="space-y-2">
         {filteredContacts.map((contact) => (
-          <li key={contact.id}>
+          <li key={contact.id} className="bg-white p-4 rounded shadow">
             <Contact
               name={contact.name}
               number={contact.number}
